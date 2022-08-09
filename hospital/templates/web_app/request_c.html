@@ -1,0 +1,33 @@
+{% extends "web_app/userbase.html" %}
+{% load static %}
+
+{% block content %}
+<div class="product-big-title-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-bit-title text-center">
+                    <h2>Request</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="center">
+
+ 
+    <form action="reqfill"  >
+      <input type="text" size="100" placeholder="your userid here" name="userid" >
+      <input type="submit" padding='3x' value="your userid"><br><br>
+      <input type="text" size="150" placeholder="your requests here" name="requestc" >
+      <input type="submit" padding='3x' value="your request"><br><br>
+        
+    
+     </form>
+
+
+
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,53 @@
+{% extends "web_app/userbase.html" %}
+{% load static %}
+
+{% block content %}
+<div class="product-big-title-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-bit-title text-center">
+                    <h2>User Profile</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="center">
+
+ <div class="forms">
+    <form class="loginbox"  >
+      
+      {% for i in users %}
+      <div class="textbox" >
+        <p class="label"></p>
+        <p>Name:  {{i.username}}</p>
+        
+      </div>
+       <div class="textbox" >
+        <p class="label"></p>
+        <p>Email: {{i.email}}</p>
+        
+      </div>
+      <div class="textbox" >
+        <p class="label"></p>
+        <p>Mobile: {{i.mobilenum}}</p>
+        
+      </div>
+      <div class="textbox" >
+        <p class="label"></p>
+        <p>Address: {{i.address}}</p>
+        
+      </div>
+        
+        {% endfor %}  
+          
+         </form> 
+          
+    
+      </div>
+
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,63 @@
+{% extends "web_app/userbase.html" %}
+{% load static %}
+
+{% block content %}
+<div class="product-big-title-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-bit-title text-center">
+                    <h2>Billing Information</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="center">
+
+ <div class="forms">
+    <form class="loginbox"  >
+      <h1>List of bills paid</h1>
+      
+      
+        <div class="textbox" style="clear:both;">
+          
+          
+         
+          
+          
+          <ol style="list-style-type:none;padding:0 0 0 0;">
+             <li style="padding:70px 0 5px 0" class="list">
+              <div style="clear:both;" >
+              <ol class="" style="list-style-type:none;">
+                  <li >Day &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Amount</li>
+                  
+             </ol>
+             
+            </div>
+            </li>
+            {% for i in billings %}
+            <li style="padding:70px 0 5px 0" class="list">
+              <div style="clear:both;" >
+              <ol class="" style="list-style-type:none;">
+                  <li >{{i.billing_day}} &nbsp;&nbsp; {{i.amount}}</li>
+                  
+             </ol>
+             
+            </div>
+            </li>
+            
+           {% endfor %}
+          
+          </ol>
+      </div>
+      
+    
+     </form>
+
+</div>
+
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,48 @@
+{% extends "web_app/userbase.html" %}
+{% load static %}
+
+{% block content %}
+<div class="product-big-title-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-bit-title text-center">
+                    <h2>Past prescriptions</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="center">
+
+ <div class="forms">
+    <form class="loginbox"  >
+      <div class="textbox" style="clear:both;">
+          <ol style="list-style-type:none;padding:0 0 0 0;" type="1">
+             
+            {% for i in prescriptions %}
+            <li style="padding:70px 0 5px 0;border-bottom: 2px solid black;" class="list">
+              <div style="clear:both;" >
+              <ol type="1" style="list-style-type:none;">
+                  <li >Day:&nbsp;{{i.Day}} </li>
+                  <li>doctor name:&nbsp;{{i.docname}}</li>
+                  <li>Prescription:&nbsp;{{i.prescription}}</li>
+             </ol>
+             
+            </div>
+            </li>
+            
+           {% endfor %}
+          
+          </ol>
+      </div>
+      
+    
+     </form>
+
+</div>
+
+</div>
+
+
+{% endblock content %}

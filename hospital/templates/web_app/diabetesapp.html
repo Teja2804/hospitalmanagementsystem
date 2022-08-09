@@ -1,0 +1,35 @@
+{% extends "web_app/userbase.html" %}
+{% load static %}
+
+{% block content %}
+<div class="product-big-title-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-bit-title text-center">
+                    <h2>Appointment for diabetes test</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="center">
+
+ 
+    <form action="diabetesapp"  >
+      <input type="text" size="100" placeholder="your userid here" name="uid" >
+        <input type="submit" padding='3x' value="your uid"><br><br>
+        <input type="text" size="150" placeholder="enter diabetes here" name="testname" >
+        <input type="submit" padding='3x' value="your test"><br><br>
+        <input type="date" size="150" placeholder="enter date here" name="date" >
+        <input type="submit" padding='3x' value="your date"><br><br>
+        <input type="time" size="150" placeholder="enter time here" name="time" >
+        <input type="submit" padding='3x' value="your time"><br><br>
+     </form>
+
+
+
+</div>
+
+
+{% endblock content %}
